@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08220C661D8A158F0099E9AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08220C651D8A158F0099E9AD /* main.m */; };
+		08220C691D8A158F0099E9AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08220C681D8A158F0099E9AD /* AppDelegate.m */; };
+		08220C6C1D8A158F0099E9AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08220C6B1D8A158F0099E9AD /* ViewController.m */; };
+		08220C6F1D8A158F0099E9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08220C6D1D8A158F0099E9AD /* Main.storyboard */; };
+		08220C711D8A158F0099E9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08220C701D8A158F0099E9AD /* Assets.xcassets */; };
+		08220C741D8A158F0099E9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08220C721D8A158F0099E9AD /* LaunchScreen.storyboard */; };
+		08220C791D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 08220C781D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app */; };
+		08220C7F1D8A158F0099E9AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08220C7D1D8A158F0099E9AD /* Interface.storyboard */; };
+		08220C811D8A158F0099E9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08220C801D8A158F0099E9AD /* Assets.xcassets */; };
+		08220C881D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08220C871D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		08220C8E1D8A158F0099E9AD /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08220C8D1D8A158F0099E9AD /* InterfaceController.m */; };
+		08220C911D8A158F0099E9AD /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08220C901D8A158F0099E9AD /* ExtensionDelegate.m */; };
+		08220C931D8A158F0099E9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08220C921D8A158F0099E9AD /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08220C7A1D8A158F0099E9AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08220C591D8A158F0099E9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08220C771D8A158F0099E9AD;
+			remoteInfo = "BackgroundWatchConnectivity WatchKit App";
+		};
+		08220C891D8A158F0099E9AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08220C591D8A158F0099E9AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08220C861D8A158F0099E9AD;
+			remoteInfo = "BackgroundWatchConnectivity WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		08220C9A1D8A158F0099E9AD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				08220C881D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08220C9E1D8A158F0099E9AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				08220C791D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08220C611D8A158F0099E9AD /* BackgroundWatchConnectivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundWatchConnectivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08220C651D8A158F0099E9AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08220C671D8A158F0099E9AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		08220C681D8A158F0099E9AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		08220C6A1D8A158F0099E9AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		08220C6B1D8A158F0099E9AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		08220C6E1D8A158F0099E9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08220C701D8A158F0099E9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08220C731D8A158F0099E9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		08220C751D8A158F0099E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08220C781D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BackgroundWatchConnectivity WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08220C7E1D8A158F0099E9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		08220C801D8A158F0099E9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08220C821D8A158F0099E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08220C871D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BackgroundWatchConnectivity WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08220C8C1D8A158F0099E9AD /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		08220C8D1D8A158F0099E9AD /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		08220C8F1D8A158F0099E9AD /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		08220C901D8A158F0099E9AD /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		08220C921D8A158F0099E9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08220C941D8A158F0099E9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		08220C5E1D8A158F0099E9AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08220C841D8A158F0099E9AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08220C581D8A158F0099E9AD = {
+			isa = PBXGroup;
+			children = (
+				08220C631D8A158F0099E9AD /* BackgroundWatchConnectivity */,
+				08220C7C1D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App */,
+				08220C8B1D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension */,
+				08220C621D8A158F0099E9AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		08220C621D8A158F0099E9AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08220C611D8A158F0099E9AD /* BackgroundWatchConnectivity.app */,
+				08220C781D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app */,
+				08220C871D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		08220C631D8A158F0099E9AD /* BackgroundWatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				08220C671D8A158F0099E9AD /* AppDelegate.h */,
+				08220C681D8A158F0099E9AD /* AppDelegate.m */,
+				08220C6A1D8A158F0099E9AD /* ViewController.h */,
+				08220C6B1D8A158F0099E9AD /* ViewController.m */,
+				08220C6D1D8A158F0099E9AD /* Main.storyboard */,
+				08220C701D8A158F0099E9AD /* Assets.xcassets */,
+				08220C721D8A158F0099E9AD /* LaunchScreen.storyboard */,
+				08220C751D8A158F0099E9AD /* Info.plist */,
+				08220C641D8A158F0099E9AD /* Supporting Files */,
+			);
+			path = BackgroundWatchConnectivity;
+			sourceTree = "<group>";
+		};
+		08220C641D8A158F0099E9AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08220C651D8A158F0099E9AD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08220C7C1D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				08220C7D1D8A158F0099E9AD /* Interface.storyboard */,
+				08220C801D8A158F0099E9AD /* Assets.xcassets */,
+				08220C821D8A158F0099E9AD /* Info.plist */,
+			);
+			path = "BackgroundWatchConnectivity WatchKit App";
+			sourceTree = "<group>";
+		};
+		08220C8B1D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				08220C8C1D8A158F0099E9AD /* InterfaceController.h */,
+				08220C8D1D8A158F0099E9AD /* InterfaceController.m */,
+				08220C8F1D8A158F0099E9AD /* ExtensionDelegate.h */,
+				08220C901D8A158F0099E9AD /* ExtensionDelegate.m */,
+				08220C921D8A158F0099E9AD /* Assets.xcassets */,
+				08220C941D8A158F0099E9AD /* Info.plist */,
+			);
+			path = "BackgroundWatchConnectivity WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		08220C601D8A158F0099E9AD /* BackgroundWatchConnectivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08220C9F1D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity" */;
+			buildPhases = (
+				08220C5D1D8A158F0099E9AD /* Sources */,
+				08220C5E1D8A158F0099E9AD /* Frameworks */,
+				08220C5F1D8A158F0099E9AD /* Resources */,
+				08220C9E1D8A158F0099E9AD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08220C7B1D8A158F0099E9AD /* PBXTargetDependency */,
+			);
+			name = BackgroundWatchConnectivity;
+			productName = BackgroundWatchConnectivity;
+			productReference = 08220C611D8A158F0099E9AD /* BackgroundWatchConnectivity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		08220C771D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08220C9B1D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity WatchKit App" */;
+			buildPhases = (
+				08220C761D8A158F0099E9AD /* Resources */,
+				08220C9A1D8A158F0099E9AD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08220C8A1D8A158F0099E9AD /* PBXTargetDependency */,
+			);
+			name = "BackgroundWatchConnectivity WatchKit App";
+			productName = "BackgroundWatchConnectivity WatchKit App";
+			productReference = 08220C781D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		08220C861D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08220C971D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity WatchKit Extension" */;
+			buildPhases = (
+				08220C831D8A158F0099E9AD /* Sources */,
+				08220C841D8A158F0099E9AD /* Frameworks */,
+				08220C851D8A158F0099E9AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BackgroundWatchConnectivity WatchKit Extension";
+			productName = "BackgroundWatchConnectivity WatchKit Extension";
+			productReference = 08220C871D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08220C591D8A158F0099E9AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Greg Fiumara";
+				TargetAttributes = {
+					08220C601D8A158F0099E9AD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SELUQ362Q4;
+						ProvisioningStyle = Automatic;
+					};
+					08220C771D8A158F0099E9AD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SELUQ362Q4;
+						ProvisioningStyle = Automatic;
+					};
+					08220C861D8A158F0099E9AD = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SELUQ362Q4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 08220C5C1D8A158F0099E9AD /* Build configuration list for PBXProject "BackgroundWatchConnectivity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 08220C581D8A158F0099E9AD;
+			productRefGroup = 08220C621D8A158F0099E9AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				08220C601D8A158F0099E9AD /* BackgroundWatchConnectivity */,
+				08220C771D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App */,
+				08220C861D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		08220C5F1D8A158F0099E9AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08220C741D8A158F0099E9AD /* LaunchScreen.storyboard in Resources */,
+				08220C711D8A158F0099E9AD /* Assets.xcassets in Resources */,
+				08220C6F1D8A158F0099E9AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08220C761D8A158F0099E9AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08220C811D8A158F0099E9AD /* Assets.xcassets in Resources */,
+				08220C7F1D8A158F0099E9AD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08220C851D8A158F0099E9AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08220C931D8A158F0099E9AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08220C5D1D8A158F0099E9AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08220C6C1D8A158F0099E9AD /* ViewController.m in Sources */,
+				08220C691D8A158F0099E9AD /* AppDelegate.m in Sources */,
+				08220C661D8A158F0099E9AD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08220C831D8A158F0099E9AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08220C911D8A158F0099E9AD /* ExtensionDelegate.m in Sources */,
+				08220C8E1D8A158F0099E9AD /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08220C7B1D8A158F0099E9AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08220C771D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit App */;
+			targetProxy = 08220C7A1D8A158F0099E9AD /* PBXContainerItemProxy */;
+		};
+		08220C8A1D8A158F0099E9AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08220C861D8A158F0099E9AD /* BackgroundWatchConnectivity WatchKit Extension */;
+			targetProxy = 08220C891D8A158F0099E9AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		08220C6D1D8A158F0099E9AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08220C6E1D8A158F0099E9AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		08220C721D8A158F0099E9AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08220C731D8A158F0099E9AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		08220C7D1D8A158F0099E9AD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08220C7E1D8A158F0099E9AD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		08220C951D8A158F0099E9AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		08220C961D8A158F0099E9AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		08220C981D8A158F0099E9AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				INFOPLIST_FILE = "BackgroundWatchConnectivity WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		08220C991D8A158F0099E9AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				INFOPLIST_FILE = "BackgroundWatchConnectivity WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		08220C9C1D8A158F0099E9AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				IBSC_MODULE = BackgroundWatchConnectivity_WatchKit_Extension;
+				INFOPLIST_FILE = "BackgroundWatchConnectivity WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		08220C9D1D8A158F0099E9AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				IBSC_MODULE = BackgroundWatchConnectivity_WatchKit_Extension;
+				INFOPLIST_FILE = "BackgroundWatchConnectivity WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		08220CA01D8A158F0099E9AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				INFOPLIST_FILE = BackgroundWatchConnectivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		08220CA11D8A158F0099E9AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SELUQ362Q4;
+				INFOPLIST_FILE = BackgroundWatchConnectivity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregfiumara.BackgroundWatchConnectivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08220C5C1D8A158F0099E9AD /* Build configuration list for PBXProject "BackgroundWatchConnectivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08220C951D8A158F0099E9AD /* Debug */,
+				08220C961D8A158F0099E9AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08220C971D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08220C981D8A158F0099E9AD /* Debug */,
+				08220C991D8A158F0099E9AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08220C9B1D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08220C9C1D8A158F0099E9AD /* Debug */,
+				08220C9D1D8A158F0099E9AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		08220C9F1D8A158F0099E9AD /* Build configuration list for PBXNativeTarget "BackgroundWatchConnectivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08220CA01D8A158F0099E9AD /* Debug */,
+				08220CA11D8A158F0099E9AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08220C591D8A158F0099E9AD /* Project object */;
+}
