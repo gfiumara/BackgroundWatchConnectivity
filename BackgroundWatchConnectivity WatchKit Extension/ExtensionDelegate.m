@@ -1,53 +1,108 @@
-//
-//  ExtensionDelegate.m
-//  BackgroundWatchConnectivity WatchKit Extension
-//
-//  Created by Greg Fiumara on 9/14/16.
-//  Copyright © 2016 Greg Fiumara. All rights reserved.
-//
-
 #import "ExtensionDelegate.h"
+
+@interface ExtensionDelegate()
+
+@property (nonatomic, strong) WCSession *session;
+@property (nonatomic, strong) NSMutableArray<WKWatchConnectivityRefreshBackgroundTask *> *watchConnectivityTasks;
+
+@end
 
 @implementation ExtensionDelegate
 
-- (void)applicationDidFinishLaunching {
-    // Perform any final initialization of your application.
+#pragma mark - Actions
+
+- (void)handleBackgroundTasks:(NSSet<WKRefreshBackgroundTask *> *)backgroundTasks
+{
+	NSLog(@"Watch app woke up for background task");
+
+	for (WKRefreshBackgroundTask *task in backgroundTasks) {
+		if ([task isKindOfClass:[WKWatchConnectivityRefreshBackgroundTask class]]) {
+			[self handleBackgroundWatchConnectivityTask:(WKWatchConnectivityRefreshBackgroundTask *)task];
+		} else {
+			NSLog(@"Handling an unsupported type of background task");
+			[task setTaskCompleted];
+		}
+	}
 }
 
-- (void)applicationDidBecomeActive {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)handleBackgroundWatchConnectivityTask:(WKWatchConnectivityRefreshBackgroundTask *)task
+{
+	NSLog(@"Handling WatchConnectivity background task");
+
+	if (self.watchConnectivityTasks == nil)
+		self.watchConnectivityTasks = [NSMutableArray new];
+	[self.watchConnectivityTasks addObject:task];
+
+	if (self.session.activationState != WCSessionActivationStateActivated)
+		[self.session activateSession];
 }
 
-- (void)applicationWillResignActive {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, etc.
+#pragma mark - Properties
+
+- (WCSession *)session
+{
+	NSAssert([WCSession isSupported], @"WatchConnectivity is not supported");
+
+	if (_session != nil)
+		return (_session);
+
+	_session = [WCSession defaultSession];
+	_session.delegate = self;
+
+	return (_session);
 }
 
-- (void)handleBackgroundTasks:(NSSet<WKRefreshBackgroundTask *> *)backgroundTasks {
-    // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
-    for (WKRefreshBackgroundTask * task in backgroundTasks) {
-        // Check the Class of each task to decide how to process it
-        if ([task isKindOfClass:[WKApplicationRefreshBackgroundTask class]]) {
-            // Be sure to complete the background task once you’re done.
-            WKApplicationRefreshBackgroundTask *backgroundTask = (WKApplicationRefreshBackgroundTask*)task;
-            [backgroundTask setTaskCompleted];
-        } else if ([task isKindOfClass:[WKSnapshotRefreshBackgroundTask class]]) {
-            // Snapshot tasks have a unique completion call, make sure to set your expiration date
-            WKSnapshotRefreshBackgroundTask *snapshotTask = (WKSnapshotRefreshBackgroundTask*)task;
-            [snapshotTask setTaskCompletedWithDefaultStateRestored:YES estimatedSnapshotExpiration:[NSDate distantFuture] userInfo:nil];
-        } else if ([task isKindOfClass:[WKWatchConnectivityRefreshBackgroundTask class]]) {
-            // Be sure to complete the background task once you’re done.
-            WKWatchConnectivityRefreshBackgroundTask *backgroundTask = (WKWatchConnectivityRefreshBackgroundTask*)task;
-            [backgroundTask setTaskCompleted];
-        } else if ([task isKindOfClass:[WKURLSessionRefreshBackgroundTask class]]) {
-            // Be sure to complete the background task once you’re done.
-            WKURLSessionRefreshBackgroundTask *backgroundTask = (WKURLSessionRefreshBackgroundTask*)task;
-            [backgroundTask setTaskCompleted];
-        } else {
-            // make sure to complete unhandled task types
-            [task setTaskCompleted];
-        }
-    }
+#pragma mark - WCSessionDelegate
+
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error
+{
+	switch(activationState) {
+		case WCSessionActivationStateActivated:
+			NSLog(@"WatchConnectivity session activation changed to \"activated\"");
+			break;
+		case WCSessionActivationStateInactive:
+			NSLog(@"WatchConnectivity session activation changed to \"inactive\"");
+			break;
+		case WCSessionActivationStateNotActivated:
+			NSLog(@"WatchConnectivity session activation changed to \"NOT activated\"");
+			break;
+	}
+}
+
+- (void)sessionWatchStateDidChange:(WCSession *)session
+{
+	switch(session.activationState) {
+		case WCSessionActivationStateActivated:
+			NSLog(@"WatchConnectivity session activation changed to \"activated\"");
+			break;
+		case WCSessionActivationStateInactive:
+			NSLog(@"WatchConnectivity session activation changed to \"inactive\"");
+			break;
+		case WCSessionActivationStateNotActivated:
+			NSLog(@"WatchConnectivity session activation changed to \"NOT activated\"");
+			break;
+	}
+}
+
+- (void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *, id> *)userInfo
+{
+	/*
+	 * NOTE:
+	 * Even if this method only sets the task to be completed, the default
+	 * WatchConnectivity session delegate still picks up the message
+	 * without another call to handleBackgroundTasks:
+	 */
+
+	NSLog(@"Received message with counter value = %@", userInfo[@"counter"]);
+
+	if (session.hasContentPending) {
+		NSLog(@"Task not completed. More content pending...");
+	} else {
+		NSLog(@"No pending content. Marking all tasks (%ld tasks) as complete.", (unsigned long)self.watchConnectivityTasks.count);
+		for (WKWatchConnectivityRefreshBackgroundTask *task in self.watchConnectivityTasks)
+			[task setTaskCompleted];
+		[self.watchConnectivityTasks removeAllObjects];
+	}
 }
 
 @end
